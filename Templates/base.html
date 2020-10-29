@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Welcome to the most extraordinary hotel in Boston Massachusetts">
+  <meta name="keywords" content="hotel,boston hotel,new england hotel">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style.css">
+  {% endblock %}
+  <title>{% block title %} {% endblock%} </title>   
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <div class="container">
+        <h1 class="logo"><a href="{{url_for('index')}}">HBT</a></h1>
+        <ul>
+          <li><a  href="{{url_for('index')}}">Home</a></li>
+          <li><a href="{{url_for('about')}}">About</a></li>
+          <li><a href="{{url_for('contact')}}">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  {% block content %}
+    
+  {% endblock  %}
+  
+{% block footer %}
+<footer id="main-footer">
+  <p>Hotel BT &copy; 2019, All RIghts Reserved</p>
+</footer>
+  
+{% endblock  %}
+</body>
+</html>
